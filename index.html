@@ -1,7 +1,7 @@
 <html lang="en"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resort Booking Agent</title>
+  <title>Health Navigator Agent</title>
   <style>
     * {
       margin: 0;
@@ -11,17 +11,22 @@
 
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f0fbff;
+      background-color: #f0f7ff;
       color: #333;
     }
 
     header {
-      background-color: #006b5e;
+      background-color: #0070d2;
       color: white;
       padding: 20px 40px;
       display: flex;
       align-items: center;
       gap: 15px;
+    }
+
+    header img {
+      width: 50px;
+      height: 50px;
     }
 
     header h1 {
@@ -34,7 +39,7 @@
     }
 
     .hero {
-      background: linear-gradient(135deg, #006b5e, #00a693);
+      background: linear-gradient(135deg, #0070d2, #00a1e0);
       color: white;
       text-align: center;
       padding: 60px 20px;
@@ -54,7 +59,7 @@
 
     .hero button {
       background-color: white;
-      color: #006b5e;
+      color: #0070d2;
       border: none;
       padding: 14px 30px;
       font-size: 16px;
@@ -65,7 +70,7 @@
     }
 
     .hero button:hover {
-      background-color: #d0f5ef;
+      background-color: #e0f0ff;
     }
 
     .features {
@@ -74,7 +79,7 @@
       flex-wrap: wrap;
       gap: 20px;
       padding: 50px 40px;
-      background-color: #f0fbff;
+      background-color: #f0f7ff;
     }
 
     .card {
@@ -99,7 +104,7 @@
     .card h3 {
       font-size: 18px;
       margin-bottom: 10px;
-      color: #006b5e;
+      color: #0070d2;
     }
 
     .card p {
@@ -111,7 +116,7 @@
     footer {
       text-align: center;
       padding: 20px;
-      background-color: #006b5e;
+      background-color: #0070d2;
       color: white;
       font-size: 13px;
     }
@@ -122,70 +127,66 @@
   <!-- Header -->
   <header>
     <div>
-      <h1>🏖️ Resort Booking Agent</h1>
-      <p>Your AI-Powered Resort Reservation Assistant</p>
+      <h1>🏥 Health Navigator</h1>
+      <p>Your AI-Powered Health Assistant</p>
     </div>
   </header>
 
   <!-- Hero Section -->
   <div class="hero">
-    <h2>Welcome to Resort Booking Agent</h2>
-    <p>Plan your perfect getaway! Book rooms, explore amenities, and manage your resort reservations — all in one place.</p>
+    <h2>Welcome to Health Navigator Agent</h2>
+    <p>Get instant answers to your health questions, find the right care, and navigate your wellness journey — all in one place.</p>
   </div>
 
   <!-- Feature Cards -->
   <div class="features">
     <div class="card">
-      <div class="icon">🛎️</div>
-      <h3>Room Reservations</h3>
-      <p>Browse and book from a wide selection of luxury rooms and suites tailored to your needs.</p>
+      <div class="icon">🩺</div>
+      <h3>Symptom Checker</h3>
+      <p>Describe your symptoms and get guidance on the next steps for your health.</p>
     </div>
     <div class="card">
-      <div class="icon">🍽️</div>
-      <h3>Dining &amp; Restaurants</h3>
-      <p>Reserve a table at our world-class restaurants and enjoy a variety of cuisines.</p>
+      <div class="icon">📅</div>
+      <h3>Appointment Booking</h3>
+      <p>Easily schedule appointments with the right specialists near you.</p>
     </div>
     <div class="card">
-      <div class="icon">🏊</div>
-      <h3>Activities &amp; Amenities</h3>
-      <p>Explore spa treatments, pool access, water sports, and other exciting resort activities.</p>
+      <div class="icon">💊</div>
+      <h3>Medication Info</h3>
+      <p>Get reliable information about medications, dosages, and interactions.</p>
     </div>
     <div class="card">
-      <div class="icon">✈️</div>
-      <h3>Travel Assistance</h3>
-      <p>Get help with transportation, check-in details, and special requests for your stay.</p>
+      <div class="icon">❤️</div>
+      <h3>Wellness Tips</h3>
+      <p>Receive personalized tips to maintain a healthy and balanced lifestyle.</p>
     </div>
   </div>
 
   <!-- Footer -->
   <footer>
-    <p>© 2026 Resort Booking Agent. Powered by Salesforce.</p>
+    <p>© 2026 Health Navigator Agent. Powered by Salesforce.</p>
   </footer>
 
   <!-- Salesforce Embedded Messaging -->
-  <script type="text/javascript">
-    function initEmbeddedMessaging() {
-      try {
-        embeddedservice_bootstrap.settings.language = 'en_US';
-        embeddedservice_bootstrap.init(
-          '00DKZ000000JNq9',
-          'Resort_Agent',
-          'https://ve1744972873802.my.site.com/ESWResortAgent1778675578586',
-          {
-            scrt2URL: 'https://ve1744972873802.my.salesforce-scrt.com'
-          }
-        );
-      } catch (err) {
-        console.error('Error loading Embedded Messaging: ', err);
-      }
-    }
+  <script type='text/javascript'>
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
 
-    function startChat() {
-      embeddedservice_bootstrap.utilAPI.launchChat();
-    }
-  </script>
-  <script type="text/javascript" src="https://ve1744972873802.my.site.com/ESWResortAgent1778675578586/assets/js/bootstrap.min.js" onload="initEmbeddedMessaging()">
-  </script>
+			embeddedservice_bootstrap.init(
+				'00DKZ000000JNq9',
+				'Health_Navigator_Messaging_Channel',
+				'https://ve1744972873802.my.site.com/ESWHealthNavigatorMessa1778683842696',
+				{
+					scrt2URL: 'https://ve1744972873802.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
+</script>
+<script type='text/javascript' src='https://ve1744972873802.my.site.com/ESWHealthNavigatorMessa1778683842696/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
 
 
 </body></html>
